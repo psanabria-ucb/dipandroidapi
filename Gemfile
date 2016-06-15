@@ -25,6 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
+gem 'responders'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -33,6 +34,7 @@ gem 'faker'
 # gem 'capistrano-rails', group: :development
 group :production do
   gem 'pg'
+  gem 'rails_12factor'
 end
 
 group :development, :test do

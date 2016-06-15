@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :posts
-  post 'login' => 'sessions#create'
+  resources :posts, :defaults => { :format => :json }
+  post 'login' => 'sessions#create', :defaults => { :format => :json }
 
-  resources :users
+  resources :users, :defaults => { :format => :json }
 end
