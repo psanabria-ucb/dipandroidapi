@@ -10,9 +10,11 @@
   username = "example#{i}"
   email = Faker::Internet.email
   password = "foobar!#{i}"
+  picture = Faker::Avatar.image(nil, "50x50")
   user = User.create!(username: username,
                 email: email,
-                password: password)
+                password: password,
+                picture_url: picture)
   10.times do
     Post.create(title: Faker::Lorem.sentence,
             content: Faker::Lorem.paragraph(2),
